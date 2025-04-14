@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rethink Systems</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      color: #333;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #0d3b66;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: url('https://t3.ftcdn.net/jpg/03/28/82/42/360_F_328824244_h8ln41Hd3sh985TASxWVMmZ2w5LYSYvz.jpg') no-repeat center center/cover;
+      height: 90vh;
+      color: purple;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .cta-btn {
+      background-color: #f95738;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      margin-top: 2rem;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      animation: fadeIn 2s ease-in;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      background-color: white;
+    }
+
+    .pillars, .trust-signals {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .pillar, .trust-item {
+      background-color: #e4f0f5;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .pillar h3, .trust-item h3 {
+      color: #0d3b66;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: #0d3b66;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-size: 1.5rem;
+    }
+
+    .social-icons a {
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #f95738;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Rethink Systems</div>
+    <nav>
+      <a href="#pillars">Pillars</a>
+      <a href="#trust">Trust</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Rethink the Future with AI</h1>
+    <p>Empowering innovation through intelligent systems</p>
+    <button class="cta-btn">Get Started</button>
+  </div>
+
+  <section id="pillars">
+    <h2 style="text-align:center; margin-bottom:2rem;">Our Three Pillars</h2>
+    <div class="pillars">
+      <div class="pillar">
+        <h3>Innovation</h3>
+        <p>We drive forward with cutting-edge technologies to solve real-world problems.</p>
+        <button class="cta-btn">Learn More</button>
+      </div>
+      <div class="pillar">
+        <h3>Intelligence</h3>
+        <p>AI-powered solutions designed to adapt, learn, and improve.</p>
+        <button class="cta-btn">Explore</button>
+      </div>
+      <div class="pillar">
+        <h3>Integrity</h3>
+        <p>Building trust through transparency, reliability, and performance.</p>
+        <button class="cta-btn">Join Us</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="trust">
+    <h2 style="text-align:center; margin-bottom:2rem;">Why Trust Rethink Systems</h2>
+    <div class="trust-signals">
+      <div class="trust-item">
+        <h3>Testimonial</h3>
+        <p>"Rethink's AI tools transformed our business processes — exceptional experience!"</p>
+      </div>
+      <div class="trust-item">
+        <h3>Success Story</h3>
+        <p>Helped a logistics firm cut costs by 30% using predictive AI systems.</p>
+      </div>
+      <div class="trust-item">
+        <h3>Product Demo</h3>
+        <p>Experience live demos that showcase our innovative edge in real-time.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Contact us at <a href="mailto:contact@rethinksystems.com" style="color: #f95738;">contact@rethinksystems.com</a></p>
+    <div class="social-icons">
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:contact@rethinksystems.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p style="margin-top: 1rem;">Empowering AI for a better tomorrow.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    document.querySelectorAll('.pillars, .trust-signals').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
